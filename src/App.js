@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+// Traigo mi Layout y mis screeens a la app
+import Layout from './components/Layout';
+import Home from './screens/Home';
+import Products from './screens/Recursos';
+import CreateProduct from './screens/CreateProduct';
+import EditProduct from './screens/EditProduct';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Recursos" element={<Products />} />
+        <Route path="/add" element={<CreateProduct/>}></Route>
+        <Route path="/edit/:id" element={<EditProduct/>}></Route>
+        <Route path="*" element={<Navigate to="/Home"/> }></Route>
+      </Routes>
+    </Layout>
   );
 }
 

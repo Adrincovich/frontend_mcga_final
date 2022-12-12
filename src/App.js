@@ -6,12 +6,14 @@ import Home from './screens/Home';
 import Products from './screens/Recursos';
 import CreateProduct from './screens/CreateProduct';
 import EditProduct from './screens/EditProduct';
+import Login from './screens/Login';
 
 function App() {
   return (
     <Layout>
       <Routes>
         <Route path="/Home" element={<Home />} />
+        <Route path="Login" element={<Login/>}></Route>
         <Route path="/Recursos" element={<Products />} />
         <Route path="/add" element={<CreateProduct/>}></Route>
         <Route path="/edit/:id" element={<EditProduct/>}></Route>

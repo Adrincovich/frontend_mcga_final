@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react'
+import styles from './footer.module.css'
 
 const Footer = () => {
-    return (
-      <footer>Final MCGA 2022</footer>
-    );
-  }
+  return (
+    <footer className={styles.footer}>
+        MCGA Final: Juan Amarillo & Adrián Drincovich
+    </footer>
+  );
+}
 
-  export default Footer
+export default Footer

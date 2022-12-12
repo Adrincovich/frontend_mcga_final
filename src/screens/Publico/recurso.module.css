@@ -1,0 +1,78 @@
+.conteinerSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 73.3vh;
+    width: 100%;
+}
+
+.conteinerTable{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 80%;
+    background-color: rgb(154, 153, 153);
+}
+
+.conteinerTable thead tr{
+    background-color: rgb(49, 49, 49);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(98, 97, 97);
+}
+
+.conteinerTable th, .conteinerTable td{
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.conteinerTable tbody tr{
+    border-bottom: 1px solid rgb(128, 124, 124);
+}
+
+.conteinerTable tbody tr:nth-of-type(even) {
+    background-color: rgb(191, 185, 185);
+}
+
+.editar, .delete{
+    padding: 5px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.agregar{
+    padding: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.agregar:hover, .editar:hover, .delete:hover{
+    background-color: rgb(83, 82, 82);
+}
+
+.loading{
+    color: white;
+    text-align: center;
+}
+
+.conteinerbutton{
+    width: 100%;
+}
+
+.linkbutton{
+    justify-content: center;
+}

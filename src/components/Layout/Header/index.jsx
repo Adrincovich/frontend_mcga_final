@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { logOutUser } from '../../../store/users/actions';
 import Button from '../../Shared/Button';
-
+import styles from './header.module.css'
 const Header = () => {
   const user = localStorage.getItem('user');
   const navigate = useNavigate();
@@ -18,9 +18,12 @@ const Header = () => {
     navigate('/login');
   }
   return (
-    <header>
+    <header className={styles.header}>
         <div>
-            <Link to={'/'}><h1>FINAL</h1></Link>
+            <Link to={'/'} className={styles.headerTitle}><h1>Home</h1></Link>
+        </div>
+        <div>
+            <Link to={'/Publico'} className={styles.headerTitle}><h1>Products</h1></Link>
         </div>
         { user ? <Button
           onClick={logOut}
@@ -34,6 +37,7 @@ const Header = () => {
         color='white'
         content='Log in'
         />}
+        
     </header>
   );
 }

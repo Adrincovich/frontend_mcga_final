@@ -1,0 +1,18 @@
+.header{
+    background: #191818;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header > *{
+    font-size: 1.25rem !important;
+    padding: 1.25rem !important;
+}
+
+.headerTitle{
+    text-decoration: none;
+    color: white;
+}

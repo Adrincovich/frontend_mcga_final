@@ -8,8 +8,8 @@
 }
 
 .header > *{
-    font-size: 1.25rem !important;
-    padding: 1.25rem !important;
+    font-size: 1rem;
+    padding: 1rem !important;
 }
 
 .headerTitle{

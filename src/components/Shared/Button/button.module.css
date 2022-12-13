@@ -4,15 +4,9 @@
     border: none;
     color: white;
     font-weight: 700;
-    font-size: 1rem;
-}
-
-.button svg{
-    margin-right: .25rem;
+    font-size: 1.25rem !important;
 }
 
 .button:hover{
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
 }

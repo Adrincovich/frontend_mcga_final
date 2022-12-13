@@ -1,20 +1,19 @@
 import React from 'react'
 import styles from './input.module.css'
-const Input = ({type, placeholder, requiredTags, register, inputName, errors}) => {
+const Input = ({type, requiredTags, register, inputName, errors}) => {
   return (<>
         <input
         type={type}
-        placeholder={placeholder}
         className={styles.input}
         {...register(inputName, requiredTags)}
         />
-        {errors && 
+        {errors &&
         <p className={styles.errorLabel}>
-            { errors.type === 'required' ? 'Required'
-            : errors.type === 'maxLength' ? 'Exceeded maximumn length'
-            : errors.type === 'minLength' ? 'Invalid minimum length'
-            : errors.type === 'min' ? 'Invalid quantity'
-            : 'Invalid pattern'}
+            { errors.type === 'required' ? 'Requerido'
+            : errors.type === 'maxLength' ? 'Longitud máxima excedida'
+            : errors.type === 'minLength' ? 'Longitud mínima excedida'
+            : errors.type === 'min' ? 'Cantidad no válida'
+            : 'Patrón no válido'}
         </p>}
     </>
   )

@@ -19,12 +19,12 @@ const Header = () => {
   }
   return (
     <header className={styles.header}>
-        <div>
-            <Link to={'/'} className={styles.headerTitle}><h1>Home</h1></Link>
-        </div>
-        <div>
-            <Link to={'/Publico'} className={styles.headerTitle}><h1>Products</h1></Link>
-        </div>
+      <div>
+          <Link to={'/'} className={styles.headerTitle}><h1>Home</h1></Link>
+      </div>
+      <div>
+          <Link to={'/Publico'} className={styles.headerTitle}><h1>Products</h1></Link>
+      </div>
         { user ? <Button
           onClick={logOut}
           background='none'
@@ -37,7 +37,6 @@ const Header = () => {
         color='white'
         content='Log in'
         />}
-        
     </header>
   );
 }

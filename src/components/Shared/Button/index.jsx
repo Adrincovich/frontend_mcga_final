@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './button.module.css'
 const Button = ({icon, content, color, background, onClick, type}) => {
   return (
     <button
@@ -7,6 +8,7 @@ const Button = ({icon, content, color, background, onClick, type}) => {
         background: background
     }}
     type={type}
+    className={`${styles.button}`}
     onClick={onClick}
     >
         {icon}

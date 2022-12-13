@@ -27,9 +27,9 @@ const Login = () => {
             "email": e.email,
             "pass": e.password
         };
-        
+
         dispatch(getUsers(body));
-        
+
         if(isError){
             setOpen(true);
         }
@@ -38,17 +38,17 @@ const Login = () => {
             navigate('/');
         }
     }
-    
+
     return (
         <div className={styles.login}>
-            { isError && 
+            { isError &&
             <InformationModal
                 Message={data.Message}
                 Title='Error in login!'
                 open={open}
                 setOpen={setOpen}
             />}
-            
+
             <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <h2 className={styles.title}>Login</h2>
                 <InputContainer label={'Email'}>
@@ -56,7 +56,6 @@ const Login = () => {
                         register={register}
                         inputName={'email'}
                         requiredTags={{ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ }}
-                        placeholder={'Email'}
                         errors={errors.email}
                     />
                 </InputContainer>
@@ -65,7 +64,6 @@ const Login = () => {
                         register={register}
                         inputName={'password'}
                         requiredTags={{ required: true }}
-                        placeholder={'Password'}
                         type='password'
                         errors={errors.password}
                     />

@@ -52,7 +52,7 @@ export const editProductThunk = (product) => async (dispatch) => {
         dispatch(editProductLoading(true));
         const response = await fetch(`http://localhost:3001/Products/update/${product._id}`,{
             method: 'PUT',
-            mode: 'no-cors',
+            mode: 'cors',
             headers: {
                 'content-Type': 'application/json',
             },

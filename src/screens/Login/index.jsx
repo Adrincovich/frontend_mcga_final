@@ -69,7 +69,7 @@ const Login = () => {
                     />
                 </InputContainer>
                 <Button
-                    content='Log In' 
+                    content='Log In'
                     background='#28a745'
                     type='submit'
                  />

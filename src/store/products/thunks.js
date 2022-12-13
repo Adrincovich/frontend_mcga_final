@@ -16,7 +16,7 @@ import {
 export const saveProducts = () => async (dispatch) => {
     try {
         dispatch(saveDataLoading(true));
-        const response = await fetch('https://mcga-2022-backend-git-master-julianv97.vercel.app/api/products');
+        const response = await fetch('http://localhost:3001/Products');
         const productsResponse = await response.json();
         if (response.status !== 200) throw new Error('Error');
         dispatch(saveData(productsResponse));
@@ -29,8 +29,9 @@ export const saveProducts = () => async (dispatch) => {
 export const addProductThunk = (product) => async (dispatch) => {
     try{
         dispatch(addProductLoading(true));
-        const response = await fetch('https://mcga-2022-backend-git-master-julianv97.vercel.app/api/products/add',{
+        const response = await fetch('http://localhost:3001/Products/add',{
             method: 'POST',
+            mode: 'cors',
             headers: {
                 'content-Type': 'application/json',
             },
@@ -49,8 +50,9 @@ export const addProductThunk = (product) => async (dispatch) => {
 export const editProductThunk = (product) => async (dispatch) => {
     try{
         dispatch(editProductLoading(true));
-        const response = await fetch(`https://mcga-2022-backend-git-master-julianv97.vercel.app/api/products/${product._id}`,{
+        const response = await fetch(`http://localhost:3001/Products/update/${product._id}`,{
             method: 'PUT',
+            mode: 'no-cors',
             headers: {
                 'content-Type': 'application/json',
             },
@@ -69,9 +71,10 @@ export const editProductThunk = (product) => async (dispatch) => {
 export const deleteProductsThunk = (id) => async (dispatch) => {
     dispatch(deleteProductLoading());
     try {
-    const response = await fetch(`https://mcga-2022-backend-git-master-julianv97.vercel.app/api/products/${id}`,
+    const response = await fetch(`http://localhost:3001/Products/delete/${id}`,
     {
         method: 'DELETE',
+        // mode: 'no-cors',
         headers: {
             'content-Type': 'application/json',
         },

@@ -7,7 +7,7 @@ import {
 export const getUsers = (data) => async (dispatch) => {
     dispatch(getUserLoading());
     try {
-        const response = await fetch('', {
+        const response = await fetch('http://localhost:3001/Users/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)

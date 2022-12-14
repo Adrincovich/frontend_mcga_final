@@ -23,7 +23,9 @@ const Header = () => {
           <Link to={'/'} className={styles.headerTitle}><h1>Home</h1></Link>
       </div>
       <div>
-          <Link to={'/Publico'} className={styles.headerTitle}><h1>Products</h1></Link>
+          { user ? <Link to={'/Recursos'} className={styles.headerTitle}><h1>Productos</h1></Link>
+          : <Link to={'/Publico'} className={styles.headerTitle}><h1>Productos</h1></Link>
+          }
       </div>
         { user ? <Button
           onClick={logOut}

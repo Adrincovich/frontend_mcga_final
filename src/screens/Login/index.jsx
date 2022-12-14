@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import InputContainer from '../../components/Shared/InputContainer'
 import Input from '../../components/Shared/Input'
-import Button from '../../components/Shared/Button'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUsers } from '../../store/users/thunks'
 import InformationModal from '../../components/Shared/Modal'
@@ -19,7 +18,7 @@ const Login = () => {
 
     useEffect(() => {
         if(userStorage)
-            return navigate('/');
+            return navigate('/Recursos');
     }, [userStorage, navigate])
 
     const onSubmit = (e) => {

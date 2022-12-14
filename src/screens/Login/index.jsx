@@ -68,11 +68,7 @@ const Login = () => {
                         errors={errors.password}
                     />
                 </InputContainer>
-                <Button
-                    content='Log In'
-                    background='#28a745'
-                    type='submit'
-                 />
+                <button type='submit' className={styles.button}>Iniciar Sesión</button>
             </form>
         </div>
     )

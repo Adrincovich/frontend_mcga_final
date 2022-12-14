@@ -1,8 +1,8 @@
 .input{
-    padding: .5rem;
-    font-size: 1.25rem;
+    font-size: 12px;
     margin: 0;
     background-color: rgb(245, 245, 245);
+    padding: 8px;
 }
 
 .errorLabel{

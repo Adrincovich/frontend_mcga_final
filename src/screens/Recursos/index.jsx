@@ -73,7 +73,7 @@ const Products = () => {
 
             </InformationModal>}
             <section className={styles.conteinerSection}>
-                <Link  className={styles.linkbutton} to={"/add"}><button className={styles.agregar}>Agregar Producto</button></Link>
+            <Link  className={styles.linkbutton} to={"/add"}><button className={styles.agregar}>Agregar Producto</button></Link>
                 <table className={styles.conteinerTable}>
                     <thead>
                         <tr>

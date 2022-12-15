@@ -16,7 +16,7 @@ import {
 export const saveProducts = () => async (dispatch) => {
     try {
         dispatch(saveDataLoading(true));
-        const response = await fetch('http://localhost:3001/Products');
+        const response = await fetch('https://backend-mcga-final.vercel.app/Products');
         const productsResponse = await response.json();
         if (response.status !== 200) throw new Error('Error');
         dispatch(saveData(productsResponse));
@@ -29,7 +29,7 @@ export const saveProducts = () => async (dispatch) => {
 export const addProductThunk = (product) => async (dispatch) => {
     try{
         dispatch(addProductLoading(true));
-        const response = await fetch('http://localhost:3001/Products/add',{
+        const response = await fetch('https://backend-mcga-final.vercel.app/Products/add',{
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -50,7 +50,7 @@ export const addProductThunk = (product) => async (dispatch) => {
 export const editProductThunk = (product) => async (dispatch) => {
     try{
         dispatch(editProductLoading(true));
-        const response = await fetch(`http://localhost:3001/Products/update/${product._id}`,{
+        const response = await fetch(`https://backend-mcga-final.vercel.app/Products/update/${product._id}`,{
             method: 'PUT',
             mode: 'cors',
             headers: {
@@ -71,7 +71,7 @@ export const editProductThunk = (product) => async (dispatch) => {
 export const deleteProductsThunk = (id) => async (dispatch) => {
     dispatch(deleteProductLoading());
     try {
-    const response = await fetch(`http://localhost:3001/Products/delete/${id}`,
+    const response = await fetch(`https://backend-mcga-final.vercel.app/Products/delete/${id}`,
     {
         method: 'DELETE',
         // mode: 'no-cors',

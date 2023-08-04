@@ -1,6 +1,6 @@
 # Final MCGA Fronent
 
-#### Proyecto realizado por Juan Amarillo y Drincovich Adrián. Aplicación web desarrollada con reac y redux, en conjunto con librerías adicionales como "React-hook-form" - "redux-thunk" - "react-router-dom", además de las que ofrece reac.
+#### Proyecto realizado por Juan Amarillo y Drincovich Adrián. Aplicación web desarrollada con reac y redux, en conjunto con librerías adicionales como "React-hook-form" - "redux-thunk" - "react-router-dom", además de las que ofrece react.
 #### Utilizamos también NPM, Git y GitHub como repositiorio, pegándole a la API a una base de datos Moongose, no relacional. Utilizamos URL hosteadas en la nube con aplicación vercel y desarrollamos un loguin con autenticación a través de un token que se genera al loguarse y expira en 1 día.
 
 ## `npm i`
